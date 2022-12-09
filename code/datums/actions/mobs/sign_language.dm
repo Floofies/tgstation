@@ -73,18 +73,23 @@
 	))
 	HideFrom(owner)
 
-/// Signal handler for SIGNAL_ADDTRAIT(TRAIT_MUTE)
+/// Signal handler for [SIGNAL_ADDTRAIT(TRAIT_MUTE)]
 /// Hides the action if the signing Carbon gains TRAIT_MUTE.
 /datum/action/innate/sign_language/proc/on_muted()
 	SIGNAL_HANDLER
 
 	RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_MUTE), PROC_REF(on_unmuted))
 	hide_action()
+
+	// Disable sign language if the Carbon was muted via the timestop effect.
+	if (HAS_TRAIT_FROM(owner, TRAIT_MUTE, TIMESTOP_TRAIT))
+		if (HAS_TRAIT(owner, TRAIT_SIGN_LANG))
+			Deactivate()
 	// Enable sign language if the Carbon knows it and just gained TRAIT_MUTE
-	if (!HAS_TRAIT(owner, TRAIT_SIGN_LANG))
+	else if (!HAS_TRAIT(owner, TRAIT_SIGN_LANG))
 		Activate()
 
-/// Signal handler for SIGNAL_REMOVETRAIT(TRAIT_MUTE)
+/// Signal handler for [SIGNAL_REMOVETRAIT(TRAIT_MUTE)]
 /// Re-shows the action if the signing Carbon loses TRAIT_MUTE.
 /datum/action/innate/sign_language/proc/on_unmuted()
 	SIGNAL_HANDLER
