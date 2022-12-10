@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;airalarm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/airalarm.html#var">Var Details</a> - <a href="obj/machinery/airalarm.html#proc">Proc Details</a></header>
+<main>
+<h1>airalarm <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/airalarm.html">airalarm</a></aside>
+        
+    
+            <a href="https://github.com/Floofies/tgstation/blob/8a18a77e9f1de354743ab0f110950d859e846fa2/code/modules/atmospherics/machinery/airalarm.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;machinery&#x2F;airalarm.dm 67"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/airalarm.html#var/alarm_manager">alarm_manager</a></th><td>Represents a signel source of atmos alarms, complains to all the listeners if one of our thresholds is violated</td></tr>
+            <tr><th><a href="obj/machinery/airalarm.html#var/danger_level">danger_level</a></th><td>Current alert level, found in code/__DEFINES/atmospherics/atmos_machinery.dm
+AIR_ALARM_ALERT_NONE, AIR_ALARM_ALERT_MINOR, AIR_ALARM_ALERT_SEVERE</td></tr>
+            <tr><th><a href="obj/machinery/airalarm.html#var/my_area">my_area</a></th><td>A reference to the area we are in</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/airalarm.html#proc/check_air_dangerlevel">check_air_dangerlevel</a></th><td>main proc for throwing a shitfit if the air isnt right.
+goes into warning mode if gas parameters are beyond the tlv warning bounds, goes into hazard mode if gas parameters are beyond tlv hazard bounds</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/alarm_manager"><aside class="declaration">var </aside>alarm_manager
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/alarm_handler.html">alarm_handler</a></aside>
+        
+    
+            <a href="https://github.com/Floofies/tgstation/blob/8a18a77e9f1de354743ab0f110950d859e846fa2/code/modules/atmospherics/machinery/airalarm.dm#L95">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;machinery&#x2F;airalarm.dm 95"/></a></h3>
+        <p>Represents a signel source of atmos alarms, complains to all the listeners if one of our thresholds is violated</p><h3 id="var/danger_level"><aside class="declaration">var </aside>danger_level
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Floofies/tgstation/blob/8a18a77e9f1de354743ab0f110950d859e846fa2/code/modules/atmospherics/machinery/airalarm.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;machinery&#x2F;airalarm.dm 83"/></a></h3>
+        <p>Current alert level, found in code/__DEFINES/atmospherics/atmos_machinery.dm
+AIR_ALARM_ALERT_NONE, AIR_ALARM_ALERT_MINOR, AIR_ALARM_ALERT_SEVERE</p><h3 id="var/my_area"><aside class="declaration">var </aside>my_area
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Floofies/tgstation/blob/8a18a77e9f1de354743ab0f110950d859e846fa2/code/modules/atmospherics/machinery/airalarm.dm#L87">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;machinery&#x2F;airalarm.dm 87"/></a></h3>
+        <p>A reference to the area we are in</p><h2 id="proc">Proc Details</h2><h3 id="proc/check_air_dangerlevel"><aside class="declaration">proc </aside>check_air_dangerlevel<aside>(/<a href="turf.html">turf</a>/location, /<a href="datum.html">datum</a>/<a href="datum/gas_mixture.html">gas_mixture</a>/environment, exposed_temperature) 
+        
+    
+            <a href="https://github.com/Floofies/tgstation/blob/8a18a77e9f1de354743ab0f110950d859e846fa2/code/modules/atmospherics/machinery/airalarm.dm#L653">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;atmospherics&#x2F;machinery&#x2F;airalarm.dm 653"/></a></aside>
+        </h3>
+        <p>main proc for throwing a shitfit if the air isnt right.
+goes into warning mode if gas parameters are beyond the tlv warning bounds, goes into hazard mode if gas parameters are beyond tlv hazard bounds</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/Floofies/tgstation/tree/8a18a77e9f1de354743ab0f110950d859e846fa2">8a18a77</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
